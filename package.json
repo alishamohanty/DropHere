@@ -1,0 +1,19 @@
+{
+  "name": "drophere",
+  "version": "1.0.0",
+  "description": "A simple aws application to drop files given a link",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alishamohanty/DropHere.git"
+  },
+  "author": "Alisha Mohanty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alishamohanty/DropHere/issues"
+  },
+  "homepage": "https://github.com/alishamohanty/DropHere#readme"
+}
