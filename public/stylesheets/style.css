@@ -1,3 +1,37 @@
 body {
-    background-color:palevioletred;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content: center;
+    display: flex;
+}
+file {
+    border: 1px solid black;
+}
+input[type="file"] {
+    display: none;
+    color: aliceblue;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    justify-content: center;
+    color: #ccc;
+    vertical-align: middle;
+}
+input {
+    
+}
+.container {
+    margin-top:auto;
+    margin-bottom: auto;
+    justify-content: center;
+    display: flex;
 }
