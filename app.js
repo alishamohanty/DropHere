@@ -11,20 +11,17 @@ var app = express()
 var upload = multer({
     storage: multerS3({
       s3: s3,
-      bucket: 'dropstuffshere',
+      bucket: '',//name of the bucket
       metadata: function (req, file, cb) {
-        console.log('Inside the metadata where req is',req)
-        console.log("---------------------------------\n--------------------------")
-        console.log('Inside the metadata where file is',file)
-        cb(null, {fieldName: file.fieldname});
+        cb(null, {fieldName: file.originalname});
       },
       key: function (req, file, cb) {
-        cb(null, Date.now().toString())
+        let filename = file.originalname
+        cb(null, filename)
       },
       contentType: multerS3.AUTO_CONTENT_TYPE,
     })
   })
-
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
@@ -34,16 +31,15 @@ app.get('/', function (req, res) {
   res.render('form')
 })
 
-app.post('/upload', upload.any(),(req, res, err) => {
+app.post('/upload', upload.any(),(req, res, next) => {
   console.log("Inside the /upload post*************************")
-  console.log(req.file)
+  console.log(req.files)
   console.log('************************************************')
-  res.send(req.files)
-  if(err) {
-      console.log("Error ")
-  }
+  res.redirect('/success')
 })
-
+app.get('/success',(req,res) => {
+  res.render('success')
+})
 app.listen(3000,(err,next) => {
     console.log("Listening to the port 3000")
     if (err) {

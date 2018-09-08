@@ -1,7 +1,7 @@
 body {
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #aa4b6b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     justify-content: center;
     display: flex;
 }
@@ -13,7 +13,7 @@ input[type="file"] {
     color: aliceblue;
 }
 .custom-file-upload {
-    border: 1px solid #ccc;
+    border: 1px solid ;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
@@ -30,6 +30,17 @@ form {
 .container {
     justify-content: center;
     display: flex;
-    align-items: center;
-    margin-top:40vh;
+    align-items: center;   
+}
+.success {
+    color: gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48vh;
+    font-size: 5rem;
+}
+@-moz-document url-prefix() {
+    .container {
+        margin-top:40vh;
+    }
 }
