@@ -25,13 +25,11 @@ form {
     justify-content: center;
     color: #ccc;
     vertical-align: middle;
-}
-input {
-    
+    align-items: center;
 }
 .container {
-    margin-top:auto;
-    margin-bottom: auto;
     justify-content: center;
     display: flex;
+    align-items: center;
+    margin-top:40vh;
 }
