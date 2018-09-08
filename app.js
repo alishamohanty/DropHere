@@ -28,10 +28,12 @@ var upload = multer({
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
+// AWS.config.loadFromPath('/config.json') or instead we can store the secret credentials at config.json file 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
   res.render('form')
 })
+
 app.post('/upload', upload.any(),(req, res, err) => {
   console.log("Inside the /upload post*************************")
   console.log(req.file)
@@ -41,6 +43,7 @@ app.post('/upload', upload.any(),(req, res, err) => {
       console.log("Error ")
   }
 })
+
 app.listen(3000,(err,next) => {
     console.log("Listening to the port 3000")
     if (err) {
